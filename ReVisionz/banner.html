@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>banner slider</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <style>
+        h3 {
+            margin: 5px 0;
+        }
+
+        .sliderContainer {
+            position: relative;
+        }
+
+        .slick-slide {
+            color: white;
+            font-size: 30px;
+            font-family: "Arial", "Helvetica";
+            text-align: center;
+        }
+
+        .slick-prev:before,
+        .slick-next:before {
+            color: black;
+        }
+
+        .slick-dots {
+            bottom: -30px;
+        }
+
+        .progressBarContainer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            right: 50%;
+        }
+
+        .slider-content {
+            position: absolute;
+            width: 100%;
+            transform: translate(-50%, -50%);
+            text-align: left;
+            margin: 0;
+            top: 70%;
+            left: 50%;
+        }
+
+        .progressBarContainer div {
+            display: block;
+            width: auto;
+            padding: 0;
+            cursor: pointer;
+            margin-right: 0%;
+            float: left;
+            color: white;
+        }
+
+        .progressBarContainer div:last-child {
+            margin-right: 0;
+        }
+
+        .progressBarContainer div span.progressBar {
+            width: 100%;
+            height: 2px;
+            background-color: transparent;
+            display: block;
+        }
+
+        .progressBarContainer div span.progressBar .inProgress {
+            background-color: #00BBFF;
+            width: 0%;
+            height: 2px;
+        }
+
+        .banner-section .progressBarContainer h5 {
+            font-size: 16px;
+            font-weight: 400;
+            padding: 30px 35.5px;
+            border-top: solid 2px #00BBFF;
+        }
+
+        .progressBarContainer h5 {
+            font-family: Hellix;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .slider-content h1 {
+            color: #FFF;
+            font-family: Hellix;
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .slider-image img {
+            width: 100%;
+        }
+
+        .progressBarContainer {
+            position: absolute;
+            width: 100%;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: absolute;
+            width: 100%;
+            transform: translate(-50%, -50%);
+            text-align: left;
+            margin: 0;
+            top: 90%;
+            left: 50%;
+        }
+
+        @media only screen and (max-width: 1400px) {
+            .banner-section .progressBarContainer h5 {
+                padding: 15px;
+                font-size: 14px;
+            }
+
+            .progressBarContainer {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
+
+        @media screen and (max-width: 1023px) {
+            .progressBarContainer.container {
+                display: none;
+            }
+
+            .slider-image img {
+                width: 100%;
+                height: -webkit-fill-available;
+                height: 100vh;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="banner-section">
+
+        <div class="sliderContainer">
+            <div class="slider single-item">
+                <div>
+                    <div class="slider-image"> <img src="./assets/images/banner-img.webp" class="img-fluid" alt="...">
+                    </div>
+                    <div class="slider-content container">
+
+                        <h1>Digital Twin Strategy & Technology <br> Implementation Experts</h1>
+                        <div class="row">
+                            <div class="col-12 col-md-8">
+                                <P class="fs-5">Helping companies reduce value leakage by connecting decision-makers to
+                                    an improved
+                                    digital view of their physical assets.</P>
+                            </div>
+
+                            <div class="col-12 col-md-4 d-flex justify-content-end  align-items-start">
+                                <a href="javascript:void(0)"
+                                    class="web-btn white-web-btn solid-btn b-border block-top btn-light">Talk to an
+                                    Expert</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="slider-image"> <img src="./assets/images/banner-img.webp" class="img-fluid" alt="...">
+                    </div>
+                    <div class="slider-content container">
+
+                        <h1>Digital Twin Strategy & Technology <br> Implementation Experts</h1>
+                        <div class="row">
+                            <div class="col-12 col-md-8">
+                                <P class="fs-5">Helping companies reduce value leakage by connecting decision-makers to
+                                    an improved
+                                    digital view of their physical assets.</P>
+                            </div>
+
+                            <div class="col-12 col-md-4 d-flex justify-content-end  align-items-start">
+                                <a href="javascript:void(0)"
+                                    class="web-btn white-web-btn solid-btn b-border block-top btn-light">Talk to an
+                                    Expert</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="slider-image"> <img src="./assets/images/banner-img.webp" class="img-fluid" alt="...">
+                    </div>
+                    <div class="slider-content container">
+
+                        <h1>Digital Twin Strategy & Technology <br> Implementation Experts</h1>
+                        <div class="row">
+                            <div class="col-12 col-md-8">
+                                <P class="fs-5">Helping companies reduce value leakage by connecting decision-makers to
+                                    an improved
+                                    digital view of their physical assets.</P>
+                            </div>
+
+                            <div class="col-12 col-md-4 d-flex justify-content-end  align-items-start">
+                                <a href="javascript:void(0)"
+                                    class="web-btn white-web-btn solid-btn b-border block-top btn-light">Talk to an
+                                    Expert</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="slider-image"> <img src="./assets/images/banner-img.webp" class="img-fluid" alt="...">
+                    </div>
+                    <div class="slider-content container">
+
+                        <h1>Digital Twin Strategy & Technology <br> Implementation Experts</h1>
+                        <div class="row">
+                            <div class="col-12 col-md-8">
+                                <P class="fs-5">Helping companies reduce value leakage by connecting decision-makers to
+                                    an improved
+                                    digital view of their physical assets.</P>
+                            </div>
+
+                            <div class="col-12 col-md-4 d-flex justify-content-end  align-items-start">
+                                <a href="javascript:void(0)"
+                                    class="web-btn white-web-btn solid-btn b-border block-top btn-light">Talk to an
+                                    Expert</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="slider-image"> <img src="./assets/images/banner-img.webp" class="img-fluid" alt="...">
+                    </div>
+                    <div class="slider-content container">
+
+                        <h1>Digital Twin Strategy & Technology <br> Implementation Experts</h1>
+                        <div class="row">
+                            <div class="col-12 col-md-8">
+                                <P class="fs-5">Helping companies reduce value leakage by connecting decision-makers to
+                                    an improved
+                                    digital view of their physical assets.</P>
+                            </div>
+
+                            <div class="col-12 col-md-4 d-flex justify-content-end  align-items-start">
+                                <a href="javascript:void(0)"
+                                    class="web-btn white-web-btn solid-btn b-border block-top btn-light">Talk to an
+                                    Expert</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="slider-image"> <img src="./assets/images/banner-img.webp" class="img-fluid" alt="...">
+                    </div>
+                    <div class="slider-content container">
+
+                        <h1>Digital Twin Strategy & Technology <br> Implementation Experts</h1>
+                        <div class="row">
+                            <div class="col-12 col-md-8">
+                                <P class="fs-5">Helping companies reduce value leakage by connecting decision-makers to
+                                    an improved
+                                    digital view of their physical assets.</P>
+                            </div>
+
+                            <div class="col-12 col-md-4 d-flex justify-content-end  align-items-start">
+                                <a href="javascript:void(0)"
+                                    class="web-btn white-web-btn solid-btn b-border block-top btn-light">Talk to an
+                                    Expert</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="slider-image"> <img src="./assets/images/banner-img.webp" class="img-fluid" alt="...">
+                    </div>
+                    <div class="slider-content container">
+
+                        <h1>Digital Twin Strategy & Technology <br> Implementation Experts</h1>
+                        <div class="row">
+                            <div class="col-12 col-md-8">
+                                <P class="fs-5">Helping companies reduce value leakage by connecting decision-makers to
+                                    an improved
+                                    digital view of their physical assets.</P>
+                            </div>
+
+                            <div class="col-12 col-md-4 d-flex justify-content-end  align-items-start">
+                                <a href="javascript:void(0)"
+                                    class="web-btn white-web-btn solid-btn b-border block-top btn-light">Talk to an
+                                    Expert</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="slider-image"> <img src="./assets/images/banner-img.webp" class="img-fluid" alt="...">
+                    </div>
+                    <div class="slider-content container">
+
+                        <h1>Digital Twin Strategy & Technology <br> Implementation Experts</h1>
+                        <div class="row">
+                            <div class="col-12 col-md-8">
+                                <P class="fs-5">Helping companies reduce value leakage by connecting decision-makers to
+                                    an improved
+                                    digital view of their physical assets.</P>
+                            </div>
+
+                            <div class="col-12 col-md-4 d-flex justify-content-end  align-items-start">
+                                <a href="javascript:void(0)"
+                                    class="web-btn white-web-btn solid-btn b-border block-top btn-light">Talk to an
+                                    Expert</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="progressBarContainer container">
+                <div>
+                    <span data-slick-index="0" class="progressBar"></span>
+                    <h5 class="pl-0">Oil & Gas</h5>
+                </div>
+                <div>
+                    <span data-slick-index="1" class="progressBar"></span>
+                    <h5>Industrial Construction</h5>
+                </div>
+                <div>
+                    <span data-slick-index="2" class="progressBar"></span>
+                    <h5>Chemicals</h5>
+                </div>
+                <div>
+                    <span data-slick-index="3" class="progressBar"></span>
+                    <h5>Food & Beverage</h5>
+                </div>
+                <div>
+                    <span data-slick-index="4" class="progressBar"></span>
+                    <h5>Power Generation</h5>
+                </div>
+                <div>
+                    <span data-slick-index="5" class="progressBar"></span>
+                    <h5>Electronics</h5>
+                </div>
+                <div>
+                    <span data-slick-index="6" class="progressBar"></span>
+                    <h5>Manufacturing</h5>
+                </div>
+                <div>
+                    <span data-slick-index="7" class="progressBar"></span>
+                    <h5>Mining</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".slider").slick({
+                infinite: true,
+                arrows: false,
+                dots: false,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                speed: 800,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                fade: true,
+                pauseOnHover: false,
+                pauseOnFocus: false
+            });
+
+            var percentTime;
+            var tick;
+            var time = 1;
+            var progressBarIndex = 0;
+
+            $('.progressBarContainer .progressBar').each(function (index) {
+                var progress = "<div class='inProgress inProgress" + index + "'></div>";
+                $(this).html(progress);
+            });
+
+            function startProgressbar() {
+                resetProgressbar();
+                percentTime = 0;
+                tick = setInterval(interval, 10);
+            }
+
+            function interval() {
+                percentTime += 1 / (time + 5);
+                $('.inProgress' + progressBarIndex).css({
+                    width: percentTime + "%"
+                });
+                if (percentTime >= 100) {
+                    $('.single-item').slick('slickNext');
+                    progressBarIndex++;
+                    if (progressBarIndex > 7) {
+                        progressBarIndex = 0;
+                    }
+                    startProgressbar();
+                }
+            }
+
+            function resetProgressbar() {
+                $('.inProgress').css({
+                    width: 0 + '%'
+                });
+                clearInterval(tick);
+            }
+
+            startProgressbar();
+
+            $('.progressBarContainer div').click(function () {
+                clearInterval(tick);
+                var goToThisIndex = $(this).find("span").data("slickIndex");
+                $('.single-item').slick('slickGoTo', goToThisIndex, false);
+                progressBarIndex = goToThisIndex;
+                startProgressbar();
+            });
+
+            $('.single-item').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+                progressBarIndex = nextSlide;
+                resetProgressbar();
+                startProgressbar();
+            });
+        });
+    </script>
+</body>
+
+</html>
